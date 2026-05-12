@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Решение уравнения</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .schema-container {
+            text-align: center;
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 1px 50px rgba(0, 0, 0, 0.5);
+        }
+        .schema-container img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -60,6 +74,11 @@ echo "<p class='equation'>22 * X = 220</p>";
 echo "<h2>Результат</h2>";
 echo "<p class='result'>X = $result</p>";
 ?>
+            </div>
+            
+            <div class="schema-container">
+                <h2>Блок-схема алгоритма</h2>
+                <img src="images/schema.svg" alt="Блок-схема">
             </div>
         </div>
     </main>
