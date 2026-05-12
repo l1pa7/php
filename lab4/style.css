@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 1rem 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+}
+
+.title h1 {
+    font-size: 2rem;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.main-container {
+    width: 100%;
+}
+
+.calculator {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 1px 50px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#display {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: right;
+    border: 2px solid #003366;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background: #f5f5f5;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.buttons button {
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background: #003366;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.buttons button:hover {
+    background: #0055aa;
+}
+
+.buttons .equals {
+    background: #ff6600;
+}
+
+.buttons .equals:hover {
+    background: #ff8833;
+}
+
+.result {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #003366;
+}
+
+.error {
+    color: red;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo img {
+        height: 50px;
+        margin-bottom: 1rem;
+    }
+    
+    .buttons button {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+}
+
+.result-wrapper {
+    text-align: center;
+    padding: 1rem;
+}
+
+.expression {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.result {
+    font-size: 2rem;
+    color: #003366;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.back-btn {
+    display: inline-block;
+    background: #003366;
+    color: white;
+    padding: 0.7rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.back-btn:hover {
+    background: #0055aa;
+}
