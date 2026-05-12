@@ -23,7 +23,7 @@
             <div class="result-wrapper">
                 <h2>Результат работы функции get_headers</h2>
                 <textarea rows="20" readonly><?php
-                    $headers = @get_headers('https://httpbin.org/post');
+                    $headers = get_headers('https://httpbin.org/get');
                     if ($headers === false) {
                         echo "Не удалось получить заголовки. Проверьте подключение к интернету.";
                     } else {

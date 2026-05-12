@@ -33,7 +33,7 @@
         <div class="main-container">
             <div class="result-wrapper">
 <?php
-$equation = "22 * X = 220";
+$equation = "X * 1000 = 2000";
 
 $parts = explode('=', $equation);
 $left = trim($parts[0]);
@@ -50,6 +50,8 @@ if (strpos($left, '+') !== false) {
 }
 
 $operands = explode($operator, $left);
+$operands[0] = trim($operands[0]);
+$operands[1] = trim($operands[1]);
 
 if ($operands[0] === 'X') {
     $known = (float)$operands[1];
@@ -70,7 +72,7 @@ if ($operands[0] === 'X') {
 }
 
 echo "<h2>Уравнение</h2>";
-echo "<p class='equation'>22 * X = 220</p>";
+echo "<p class='equation'>$equation</p>";
 echo "<h2>Результат</h2>";
 echo "<p class='result'>X = $result</p>";
 ?>

@@ -67,13 +67,20 @@
                     }
                     
                     function parseNumber(&$expr) {
+                        $negative = false;
+                        
+                        if ($expr[0] == '-') {
+                            $negative = true;
+                            $expr = substr($expr, 1);
+                        }
+                        
                         if ($expr[0] == '(') {
                             $expr = substr($expr, 1);
                             $num = calculateRecursive($expr);
                             if ($expr[0] == ')') {
                                 $expr = substr($expr, 1);
                             }
-                            return $num;
+                            return $negative ? -$num : $num;
                         }
                         
                         $numStr = '';
@@ -81,7 +88,9 @@
                             $numStr .= $expr[0];
                             $expr = substr($expr, 1);
                         }
-                        return (float)$numStr;
+                        
+                        $num = (float)$numStr;
+                        return $negative ? -$num : $num;
                     }
                     ?>
                     <a href="index.php" class="back-btn">Вернуться</a>

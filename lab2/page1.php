@@ -50,10 +50,10 @@
                         <label>Вариант ответа</label>
                         <div class="checkbox-group">
                             <label>
-                                <input type="radio" name="response_type[]" value="sms"> СМС
+                                <input type="checkbox" name="response_type[]" value="sms"> СМС
                             </label>
                             <label>
-                                <input type="radio" name="response_type[]" value="email"> E-mail
+                                <input type="checkbox" name="response_type[]" value="email"> E-mail
                             </label>
                         </div>
                     </div>
